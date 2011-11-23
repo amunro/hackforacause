@@ -1,0 +1,180 @@
+/**
+ * Theme Name: Hack for a Cause
+ * Theme URI: http://www.hackforacause.org/
+ * Description: The Wordpress theme for hackforacause.org
+ * Author: Conrad Muan, Andrew Munro, Faramarz Hashemi
+ * Author URI: http://www.hackforacause.org/
+ * Version: 2.0
+ **/
+
+/** Navigation when a Menu isn't assigned**/
+
+.menu ul,
+.menu ol {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+/** Nav **/
+.header-menu .menu {
+    float:left;
+    lefT:50%;
+    position:relative;
+    z-index:100;
+}
+
+.header-menu .menu a {
+    background:#ffffff;
+    display:block;
+    padding:5px;
+    color:#666;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:20px;
+    margin-left:10px;
+}
+
+.header-menu .menu a:hover {
+    color:#ED1C24;
+}
+
+.header-menu .menu li {
+    display:inline;
+    float:left;
+    position:relative;
+    right:50%;
+}
+
+.header-menu .menu li:hover > .sub-menu {
+    display:block;
+}
+
+.header-menu .sub-menu {
+    position:absolute;
+    width:100%;
+}
+
+.header-menu .sub-menu li {
+    position:static;
+}
+
+.header-menu .sub-menu {
+    display:none;
+}
+
+/** Sidebar **/
+.sidebar {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+/** pagination **/
+.navigation {
+    position:relative;
+    width:100%;
+}
+
+.navigation .nav-previous,
+.navigation .nav-next {
+    display:inline;
+    float:left;
+    position:relative;
+    width:50%;
+}
+.navigation .nav-next{
+    float:right;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+    display:block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin:0;
+    max-width: 98.5%;
+    padding:0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size:11px;
+    line-height:17px;
+    margin:0;
+    padding:0 4px 5px;
+}
+
+/* Begin */
+
+body {
+	width:960px;
+	margin:auto;
+}
+body, h1, h2, h3, h4, h5 {
+	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+}
