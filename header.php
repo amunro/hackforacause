@@ -14,7 +14,6 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
   <meta property="og:type" content="cause" />
   <meta property="og:title" content="Hack for a Cause"/>
   <meta property="og:url" content="http://www.hackforacause.org/"/>
@@ -28,7 +27,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/boilerplate.css" />
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/960.css" />
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
   <!-- end CSS-->

@@ -45,7 +45,7 @@ function register_event(){
 		'hierarchical' => true,
 		'menu_position' => 5,
 		'supports' => array('editor', 'page-attributes'),
-		'menu_icon' => '/wp-content/themes/hack-for-a-cause-theme/img/admin/icons/event.png'
+		'menu_icon' => get_bloginfo('stylesheet_directory') . '/img/admin/icons/event.png'
 	);
 	
 	register_post_type('event' , $args);

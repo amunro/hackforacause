@@ -44,7 +44,7 @@ function register_product(){
 		'hierarchical' => true,
 		'menu_position' => 5,
 		'supports' => array('title','editor','thumbnail'),
-		'menu_icon' => '/wp-content/themes/hack-for-a-cause-theme/img/admin/icons/product.png'
+		'menu_icon' => get_bloginfo('stylesheet_directory') . '/img/admin/icons/product.png'
 	);
 	
 	register_post_type('product' , $args);
