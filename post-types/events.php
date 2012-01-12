@@ -39,12 +39,12 @@ function register_event(){
 		'show_ui' => true, 
 		'show_in_menu' => true, 
 		'query_var' => true,
-		'rewrite' => true,
+		'rewrite' => array('with_front' => false),
 		'capability_type' => 'post',
 		'has_archive' => true, 
 		'hierarchical' => true,
 		'menu_position' => 5,
-		'supports' => array('editor', 'page-attributes'),
+		'supports' => array('title', 'editor', 'page-attributes'),
 		'menu_icon' => get_bloginfo('stylesheet_directory') . '/img/admin/icons/event.png'
 	);
 	
@@ -64,11 +64,15 @@ function default_event_content($content){
 	if ('event' == $current_screen->post_type){
 		$content = '
         <p><strong>Challenge:</strong> "Enter your description of the challenge here."</p>
-        <p><strong>Products Shipped:</strong></p>
-        <ol>
-            <li>Product 1..</li>
-            <li>Proudct 2..</li>
-        </ol>
+        <div class="logo-and-products clearfix">
+            <div class="logo-col">
+                <img src="'.get_stylesheet_directory_uri().'/img/eventlogo-toronto.png" alt="" />
+            </div>
+            <div class="product-col">
+                &nbsp;
+                <p><strong>Products Shipped:</strong></p>
+            </div>
+        </div>
 		';
 	}
 	

@@ -13,54 +13,54 @@ $event_meta_box = array(
 		array(
 			'name' => 'City',
 			'desc' => 'Enter the city this hackathon took place',
-			'id' => $prefix . 'city',
+			'id' => $event_prefix . 'city',
 			'type' => 'text',
 			'std' => 'City Name'
 		),
 		array(
 			'name' => 'Date',
 			'desc' => 'Enter the date this hackathon took place',
-			'id' => $prefix . 'date',
+			'id' => $event_prefix . 'date',
 			'type' => 'date',
 			'std' => 'MM.DD.YYYY'
 		),
 		array(
 			'name' => 'Charity',
 			'desc' => 'Enter the name of the charity',
-			'id' => $prefix . 'charity_name',
+			'id' => $event_prefix . 'charity_name',
 			'type' => 'text',
 			'std' => 'Charity name'
 		),
 		array(
 			'name' => 'Charity Website',
 			'desc' => 'Enter the URL of the charity <br /> eg: http://www.domain.com (optional)',
-			'id' => $prefix . 'charity_url',
+			'id' => $event_prefix . 'charity_url',
 			'type' => 'text',
 			'std' => ''
 		),
 		array(
 			'name' => 'Facebook Group',
 			'desc' => 'Enter the URL of the Facebook Group <br /> eg: http://www.facebook.com/groups/causehackers/',
-			'id' => $prefix . 'fb_group',
+			'id' => $event_prefix . 'fb_group',
 			'type' => 'text',
 			'std' => ''
 		),
 		array(
 			'name' => 'Facebook Photo Gallery',
 			'desc' => 'Enter the URL of the Facebook Photo Gallery <br /> eg: https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523',
-			'id' => $prefix . 'fb_group',
+			'id' => $event_prefix . 'fb_photo',
 			'type' => 'text',
 			'std' => ''
 		)
 		/*array(
 			'name' => 'Select box',
-			'id' => $prefix . 'select',
+			'id' => $event_prefix . 'select',
 			'type' => 'select',
 			'options' => array('Option 1', 'Option 2', 'Option 3')
 		),
 		array(
 			'name' => 'Radio',
-			'id' => $prefix . 'radio',
+			'id' => $event_prefix . 'radio',
 			'type' => 'radio',
 			'options' => array(
 				array('name' => 'Name 1', 'value' => 'Value 1'),
@@ -69,7 +69,7 @@ $event_meta_box = array(
 		),
 		array(
 			'name' => 'Checkbox',
-			'id' => $prefix . 'checkbox',
+			'id' => $event_prefix . 'checkbox',
 			'type' => 'checkbox'
 		)*/
 	)

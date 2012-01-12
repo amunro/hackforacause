@@ -33,9 +33,9 @@ include_once(TEMPLATEPATH . '/meta-boxes/products-meta-boxes.php');
  **/
 define('HEADER_TEXTCOLOR' , '');
 define('NO_HEADER_TEXT' , true);
-define('HEADER_IMAGE', '%s/img/logo-placeholder.jpg');
-define('HEADER_IMAGE_WIDTH' , '350');
-define('HEADER_IMAGE_HEIGHT', '150');
+define('HEADER_IMAGE', '%s/img/logo.png');
+define('HEADER_IMAGE_WIDTH' , '285');
+define('HEADER_IMAGE_HEIGHT', '111');
 
 /**
  * Enables uploading a custom header image. In this theme, it is used to house the logo
@@ -88,7 +88,8 @@ function launch_theme(){
         'id' => 'sidebar-1'
     ));
     register_nav_menus(array(
-        'header_menu' => 'Header Navigation'
+        'header_menu' => 'Header Navigation',
+        'footer_menu' => 'Footer Navigation'
     ));
 }
 
@@ -105,9 +106,6 @@ function boilerplate_scripts(){
     // Store template path for use in this method
     $template_path = get_template_directory_uri();
     
-    // Register google cdn version of jquery
-    wp_deregister_script('jquery');
-    wp_register_script('jquery' , 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js');
     wp_enqueue_script('jquery');
     
     // Register Modernizr (html5 for older browsers)
@@ -126,7 +124,7 @@ function boilerplate_scripts(){
 /**
  * Styles the tinymce editor 
  */
-add_editor_style();
+add_editor_style('editor-style_1.css');
 
 /**
  * Post thumbnails enabled

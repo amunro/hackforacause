@@ -7,26 +7,15 @@
  * @subpackage templates
  **/
 ?>
-</div> <!--! end of #container -->
 
-<footer class="parent-footer">
-    <div class="container_24 clearfix">
-        <div class="grid_7 left-footer">
+        </div><!-- end #main -->
+        <div id="footer">
             
+            <?php wp_nav_menu(array('theme_location'=>'footer_menu')); ?>
             
-        </div><!-- left footer -->
-        
-        <div class="grid_10 center-footer">
-            
-            
-        </div><!-- center-footer -->
-        
-        <div class="push_2 grid_3 right-footer">
-            
-            
-        </div>
-    </div><!--container_24-->
-</footer>
+        </div><!-- end #footer -->
+    </div>
+</div><!-- end .container  -->
 <?php wp_footer(); ?>
 </body>
 </html>

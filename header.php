@@ -59,21 +59,21 @@
 </script>
 
 <body <?php body_class(); ?>>
+<div id="container">
+    <div id="cintainer-inner">
+        <div id="header">
+                <h1 class="header-logo">
+                    <a href="<?php bloginfo('url'); ?>" id="logo"></a>
+                </h1>
 
-<header class="parent-header">
-    <div class="container_24 clearfix">
-        <div class="grid_9 logo">
-            <a href="<?php bloginfo('url'); ?>" id="logo"></a>
-        </div>
-        <div class="grid_15 tagline-container">
-		
-			<div style="padding-top:15px; text-align:right; position:absolute;"><fb:like href="https://www.facebook.com/hackforacause" send="true" show_faces="true"></fb:like></div>
-			
-			<div class="header-menu" style="padding-top:105px;"><?php wp_nav_menu(array('theme_location'=>'header_menu', 'container'=>'nav'));?></div>	
+                <div class="social-plugin"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fhackforacause&amp;send=false&amp;layout=standard&amp;width=260&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80&amp;appId=187998674601963" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:260px; height:80px;" allowTransparency="true"></iframe></div>		
 
-        </div>
-        <div class="clear"></div>
-    </div>  
-</header>
+                <div id="navigation">
+                    
+                    <?php wp_nav_menu(array('theme_location' => 'header_menu')); ?>
+                    
+                </div><!-- end #navigation -->
 
-<div id="container" class="container_24 clearfix">
+        </div><!-- end #header -->
+
+        <div id="main">

@@ -1,12 +1,21 @@
 <?php
 /**
- * Loop for the single event template
+ * Template Name: Events List
+ * Loops out events content type (by most recent post)
  *
  * @author Conrad Muan <con.muan@gmail.com>
  * @package hack_theme
  * @subpackage templates
  **/
+
 ?>
+
+<?php get_header(); ?>
+
+        <h2 class="page-title">Events</h2>
+
+        <?php query_posts('post_type=event'); ?>
+    
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 		<div class="event event-toronto">
 			<div class="col1">
@@ -44,3 +53,5 @@
         </article>
         
         <?php endif; ?>
+
+<?php get_footer(); ?>

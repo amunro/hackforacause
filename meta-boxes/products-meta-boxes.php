@@ -26,10 +26,16 @@ $product_metabox = array(
 	'fields' => array(
 		array(
 			'name' => 'Event',
-			'id' => $prefix . 'associated_event',
+			'id' => $product_prefix . 'associated_event',
 			'type' => 'select',
 			'options' => event_get_pages()
-		)
+		),
+        array(
+            'name' => 'FB iFrame Like Link',
+            'desc' => 'Enter the Facebook Like iFrame url',
+            'id' => $product_prefix . 'fb_like',
+            'type' => 'text'
+        )
 	)
 );
 
@@ -67,7 +73,7 @@ function product_show_box() {
 		$meta = get_post_meta($post->ID, $field['id'], true);
 		
 		echo '<tr>',
-				'<th style="width:20%"><label for="', $field['id'], '" style="font-size:15px; color:#464646; text-shadow:0px 1px 0px #fff; font-family: Georgia, \'Times New Roman\', Times">', $field['name'], '</label></th>',
+				'<th style="width:30%"><label for="', $field['id'], '" style="font-size:15px; color:#464646; text-shadow:0px 1px 0px #fff; font-family: Georgia, \'Times New Roman\', Times">', $field['name'], '</label></th>',
 				'<td>';
 		switch ($field['type']) {
 			case 'text':

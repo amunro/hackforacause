@@ -83,7 +83,11 @@ body {
 	height: 0.1px;
 	font-size: 0.1em;
 	line-height: 0; }
-	
+
+strong, b {
+    font-weight:bold;
+}
+
 #container {width: 100%;  }
 #container-inner, #header, #main, #footer 
  	{ position: relative; width: 960px; margin: 0 auto;}
@@ -138,7 +142,9 @@ body {
 #footer ul li { float: left; margin: 10px;}
 
 /* content */
+#main .the-title,
 #main .page-title { font-size: 40px; font-weight: 500; margin-bottom: 10px;}
+#main h3,
 #main .page-description { 
 	font-size: 18px; color: #666; line-height: 22px;
 	font-weight: 200; width: 690px; }
@@ -150,7 +156,7 @@ body {
 .category .category-title span { font-weight: 200; color: #666; }
 .category .category-link { 
     float: right; bold; text-decoration: none;color: #333; margin-top: 5px;
-    font-size: 14px; background: url(../img/icon-group-16.png) no-repeat 0 50%;padding-left: 20px; }
+    font-size: 14px; background: url('img/icon-group-16.png') no-repeat 0 50%;padding-left: 20px; }
 
 .category .category-link span {  font-weight: bold; text-decoration: none; color: #333;  } 
 .category .category-description { display: block; font-size: 14px; color: #666;}
@@ -174,7 +180,7 @@ body {
 /* showcase */
 .hack-item { width: 280px; height: 420px; float: left; margin: 20px;}
 .hack-item .app-image {
-    height: 250px; background: #eee url(../img/icon-app-default.png) no-repeat 50% 50%; 
+    height: 250px; background: #eee url('img/icon-app-default.png') no-repeat 50% 50%; 
     text-align: center; margin-bottom: 10px; display: block;
 	-webkit-border-radius: 5px;
 	   -moz-border-radius: 5px;
@@ -194,7 +200,7 @@ body {
 /* build */
 .build-task-list { margin: 20px 30px; padding: 0; list-style: none; list-style-position:inside; }
 .build-task-list li { 
-	line-height: 22px;list-style-image: url(../img/icon-checkbox-16.gif) ;
+	line-height: 22px;list-style-image: url('img/icon-checkbox-16.gif') ;
 	padding: 4px 0; font-size: 14px; border-bottom: 1px dotted #ccc; width: 600px;}
 .build-task-list li span { color: #666; }
 .build-task-list-title {
@@ -203,7 +209,7 @@ body {
 
 #timeline { 
 	margin: 30px 0; padding-bottom: 30px;
-	background: url(../img/timeline-tree-bg.gif) repeat-y 50% 0;}
+	background: url('img/timeline-tree-bg.gif') repeat-y 50% 0;}
 #timeline .timeline-title { 
 	font-size: 26px; background-color: #fff; 
 	margin-bottom: 20px; text-align: center; padding-bottom: 5px;}
@@ -220,7 +226,7 @@ body {
 #timeline .grand-child .task-list { margin: 0 0 0 20px; padding: 0; list-style: none; 
 	list-style-position: outside; }
 #timeline .grand-child .task-list li { 
-	line-height: 22px;list-style-image: url(../img/icon-checkbox-16.gif) ;
+	line-height: 22px;list-style-image: url('img/icon-checkbox-16.gif') ;
 	padding: 4px 0; font-size: 14px;}
 	
 .step-conception {  background-color: rgba(246,248,248,0.86); }
@@ -231,16 +237,21 @@ body {
 
 
 /* about */
+blockquote,
 .about-quote {
     width: 630px !important; clear: both;
 	margin: 30px auto; }
+blockquote,
 .about-quote blockquote {
 	font-size: 20px; color: #666; line-height: 26px;
 	font-weight: 200; position: relative; text-indent: 40px;}
+cite,
 .about-quote blockquote cite { 
 	font-weight: normal; margin-top: 20px; font-size: 14px; display: inline-block; clear: both;
 	 text-align: right; margin-right: 100px; float: right; color: #999;}
+.open-quote,
 .about-quote .open-quote { position: absolute; left: -10px; top: -14px; }
+.close-quote,
 .about-quote .close-quote { position: absolute; right:15px; bottom: -20px; }
 
 .about-content { margin: 40px auto;  width: 640px;}
@@ -255,7 +266,7 @@ body {
 	display: block; text-align: left;
     font-size: 24px;color: #ed1c24; }
 .rule span {
-   display: inline-block; background: url(../img/icon-rule.gif) no-repeat 6px 6px; 
+   display: inline-block; background: url('img/icon-rule.gif') no-repeat 6px 6px; 
    padding: 30px 0 30px 40px; font-weight: bold; }
    
    
@@ -268,6 +279,7 @@ body {
 .event-title a:hover {  }
 
 .event .col1 p { font-size: 16px; line-height: 22px; padding-right: 20px; margin-bottom: 10px; }
+ol,
 .event .col1 .product-list { 
 	font-size: 14px; list-style: decimal; list-style-position: inside; margin: 10px 0;}
 .event .col1 .product-list li { margin: 5px 0; }
@@ -278,16 +290,44 @@ body {
 .event .col2 .link-group { 
 	text-decoration: none;color: #333; margin-top: 5px; float: left; 
 	clear: both; font-size: 18px; margin-left: 5px;
-	background: url(../img/icon-group-16.png) no-repeat 0 50%;padding-left: 20px; }
+	background: url('img/icon-group-16.png') no-repeat 0 50%;padding-left: 20px; }
 .event .col2 .link-hackers {
 	text-decoration: none;color: #333; margin-top: 5px; margin-left: 5px;float: left; 
 	clear: both; font-size: 18px; 
-	background: url(../img/icon-hackers-16.png) no-repeat 0 50%; padding-left: 20px;  }
+	background: url('img/icon-hackers-16.png') no-repeat 0 50%; padding-left: 20px;  }
 .event .col2 .hackers-gallery { clear:both; margin: 10px 0; float: left;}
 .event .col2 .hackers-gallery li { float: left; margin: 5px; }
 
 .event .col2 .hackers-gallery li img { width: 137px; height: 90px; padding: 4px; border: 1px solid #ccc;}	
 .event .col2 .hackers-gallery li img:hover { border-color: #000; }
+
+.logo-and-products {
+    margin: 10px 0;
+}
+
+.logo-col {
+    display:inline;
+    float:left;
+    margin-right:10px;
+    width:82px;
+}
+
+.product-col {
+    display:inline;
+    float:left;
+    width:290px;
+}
+
+.event .product-col p,
+.event .product-col ol{
+    font-size:14px;
+    margin:0;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
 /* #Media Queries
 ================================================== */
 
