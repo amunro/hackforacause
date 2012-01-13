@@ -16,8 +16,12 @@
                 
 			</div>
 			<div class="col2">
+				<?php if ('' !== get_post_meta($post->ID, 'event_fb_group', true)): ?>
 				<a class="link-group" href="<?php echo get_post_meta($post->ID, 'event_fb_group', true); ?>"><span>Official Facebook Group</span></a>
+				<?php endif; ?>
+				<?php if ( '' !== get_post_meta($post->ID, 'event_fb_photo', true)) : ?>
 				<a class="link-hackers" href="<?php echo get_post_meta($post->ID, 'event_fb_photo', true); ?>"><span>Cause Hackers</span></a>
+				<?php endif; ?>
                 <?php /**
 				<ul class="hackers-gallery">
 					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-01.jpg" width="180" height="119" /></a></li>

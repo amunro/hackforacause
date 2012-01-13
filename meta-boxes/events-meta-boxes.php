@@ -2,6 +2,12 @@
 /**
  * Global variables
  */
+
+wp_enqueue_script('jquery-ui-core');
+wp_enqueue_script('jquery-ui-datepicker');
+//wp_enqueue_script('jquery-ui-datepicker', get_template_directory_uri() .'/js/plugins.js');
+wp_enqueue_style('jquery-ui-datepicker-style', get_bloginfo('template_url') . '/css/smoothness/jquery-ui-1.8.16.custom.css');
+
 $event_prefix = 'event_';
 $event_meta_box = array(
 	'id' => 'events-meta',
@@ -15,21 +21,21 @@ $event_meta_box = array(
 			'desc' => 'Enter the city this hackathon took place',
 			'id' => $event_prefix . 'city',
 			'type' => 'text',
-			'std' => 'City Name'
+			'std' => ''
 		),
 		array(
 			'name' => 'Date',
 			'desc' => 'Enter the date this hackathon took place',
 			'id' => $event_prefix . 'date',
 			'type' => 'date',
-			'std' => 'MM.DD.YYYY'
+			'std' => ''
 		),
 		array(
 			'name' => 'Charity',
 			'desc' => 'Enter the name of the charity',
 			'id' => $event_prefix . 'charity_name',
 			'type' => 'text',
-			'std' => 'Charity name'
+			'std' => ''
 		),
 		array(
 			'name' => 'Charity Website',
@@ -145,7 +151,7 @@ function event_show_box() {
 	}
 	
 	echo '</table>'.
-		 '<script type="text/javascript">jQuery("#date").datepicker();</script>';
+		'<script type="text/javascript">jQuery(document).ready(function(){ jQuery("#event_date").datepicker(); });</script>';
 	
 }
 

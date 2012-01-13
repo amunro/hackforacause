@@ -11,11 +11,33 @@
         <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
         
         <article <?php post_class(); ?>>
-            <header>
-                <h1 class="the-title"><?php the_title(); ?></h1>
-            </header>
-            
-            <?php the_content(); ?>
+			
+			<div class="hack-items category">
+				
+				<div class="hack-item">
+					<ul>
+						<li class="app-image">
+							<?php the_post_thumbnail(array(280, 250)); ?>
+						</li>
+						<li class="app-name"><?php the_title(); ?></li>
+						<li class="app-description">
+							<div class="app-description-container">
+								<?php the_content(); ?>
+							</div><!--app-description-container-->
+						</li>
+
+						<?php if ('' !== get_post_meta($post->ID, 'product_fb_like', true)) : ?>
+
+						<li class="app-link">
+							<iframe src="//<?php echo preg_replace('/http:\/\/www.facebook.com/', 'www.facebook.com', get_post_meta($post->ID, 'product_fb_like', true)); ?>" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowtransparency="true"></iframe>
+						</li>
+
+						<?php endif; ?>
+
+					</ul>
+				</div><!--hack-item-->
+				
+			</div>
             
         </article>
         

@@ -11,8 +11,6 @@
  * Hooks the registration of event custom post type
  */
 add_action('init' , 'register_event');
-wp_enqueue_script('jquery-ui-datepicker', get_template_directory_uri() .'/js/plugins.js');
-wp_enqueue_style('jquery-ui-datepicker-style', get_bloginfo('template_url') . '/css/smoothness/jquery-ui-1.8.16.custom.css');
 /**
  * Registers the portfolio custom post type and its taxonomy
  */
@@ -66,6 +64,7 @@ function default_event_content($content){
         <p><strong>Challenge:</strong> "Enter your description of the challenge here."</p>
         <div class="logo-and-products clearfix">
             <div class="logo-col">
+				&nbsp;
                 <img src="'.get_stylesheet_directory_uri().'/img/eventlogo-toronto.png" alt="" />
             </div>
             <div class="product-col">

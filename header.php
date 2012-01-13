@@ -29,6 +29,15 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/boilerplate.css" />
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon-114.png">
+	<!-- For first-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon-72.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon-precomposed.png">
+	<!-- For nokia devices: -->
+	<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico" />
   <!-- end CSS-->
 
 <?php wp_head(); ?>

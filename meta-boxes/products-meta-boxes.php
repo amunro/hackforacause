@@ -6,6 +6,7 @@
  */
 function event_get_pages(){
     $pages = get_posts(array('post_type' => 'event', 'numberposts' => -1,));
+	$options[] = '';
     foreach ($pages as $page){
         $options[] = $page->post_name;
         
