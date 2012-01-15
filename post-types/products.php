@@ -13,7 +13,7 @@
 add_action('init' , 'register_product');
 
 /**
- * Registers the product custom post type and its taxonomy
+ * Registers the product custom post type
  */
 function register_product(){
 	$labels = array(
@@ -38,7 +38,7 @@ function register_product(){
 		'show_ui' => true, 
 		'show_in_menu' => true, 
 		'query_var' => true,
-		'rewrite' => true,
+		'rewrite' => array('with_front' => false),
 		'capability_type' => 'post',
 		'has_archive' => true, 
 		'hierarchical' => true,

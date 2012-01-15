@@ -28,6 +28,11 @@ include_once(TEMPLATEPATH .'/post-types/products.php');
 include_once(TEMPLATEPATH . '/meta-boxes/products-meta-boxes.php');
 
 /**
+ * Include the build post type
+ */
+include_once(TEMPLATEPATH . '/post-types/checklist.php');
+
+/**
  * Definitions to be used in add_custom_image_header()
  * @see add_custom_image_header()
  **/
@@ -124,7 +129,7 @@ function boilerplate_scripts(){
 /**
  * Styles the tinymce editor 
  */
-add_editor_style('editor-style_1.css');
+add_editor_style('editor-style_3.css');
 
 /**
  * Post thumbnails enabled
