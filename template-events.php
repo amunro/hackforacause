@@ -20,7 +20,7 @@ $events = new WP_Query(array(
         <h2 class="page-title">Events</h2>
     
         <?php if($events->have_posts()) : while($events->have_posts()) : $events->the_post(); ?>
-		<div class="event event-toronto">
+		<div class="event clearfix">
 			<div class="col1">
 				<h4 class="event-title"><?php echo strtoupper(get_post_meta($post->ID, 'event_city', true)); ?> // <?php echo get_post_meta($post->ID, 'event_date', true); ?> // <a href="<?php echo get_post_meta($post->ID, 'event_charity_url', true); ?>" target="_blank"><?php echo strtoupper(get_post_meta($post->ID, 'event_charity_name', true)); ?></a></h4>
                 
