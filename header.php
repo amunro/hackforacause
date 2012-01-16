@@ -73,9 +73,7 @@
         <div id="header">
                 <h1 class="header-logo">
                     <a href="<?php bloginfo('url'); ?>" id="logo"></a>
-                </h1>
-
-                <div class="social-plugin"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fhackforacause&amp;send=false&amp;layout=standard&amp;width=260&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80&amp;appId=187998674601963" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:260px; height:80px;" allowTransparency="true"></iframe></div>		
+                </h1>	
 
                 <div id="navigation">
                     

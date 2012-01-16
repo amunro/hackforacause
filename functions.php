@@ -16,6 +16,7 @@ include_once(TEMPLATEPATH . '/post-types/events.php');
  * Includes the events meta boxes
  */
 include_once(TEMPLATEPATH . '/meta-boxes/events-meta-boxes.php');
+include_once(TEMPLATEPATH . '/meta-boxes/events-gallery-meta-box.php');
 
 /**
  * Includes the products post type registration

@@ -34,20 +34,33 @@ $events = new WP_Query(array(
 				<?php if ( '' !== get_post_meta($post->ID, 'event_fb_photo', true)) : ?>
 				<a class="link-hackers" href="<?php echo get_post_meta($post->ID, 'event_fb_photo', true); ?>"><span>Cause Hackers</span></a>
 				<?php endif; ?>
-                <?php /**
+
+                <?php if( '' !== get_post_meta($post->ID, 'event_fb_photo')) : ?>
+                
 				<ul class="hackers-gallery">
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-01.jpg" width="180" height="119" /></a></li>
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-02.jpg" width="180" height="119" /></a></li>
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-03.jpg" width="180" height="119" /></a></li>
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-04.jpg" width="180" height="119" /></a></li>
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-05.jpg" width="180" height="119" /></a></li>
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-06.jpg" width="180" height="119" /></a></li>
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-07.jpg" width="180" height="119" /></a></li>
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-08.jpg" width="180" height="119" /></a></li>
-					<li><a href="https://www.facebook.com/media/set/?set=a.278318222210676.60729.277579752284523"><img src="assets/img/hacker-to-09.jpg" width="180" height="119" /></a></li>
+                    
+                    <?php
+                        $gallery_image = 1;
+                        while ($gallery_image <= 9 ):
+                            if(get_post_meta($post->ID, 'ev_gallery_image_'.$gallery_image)):
+                    ?>
+                    
+					<li>
+                        <a href="<?php echo get_post_meta($post->ID, 'event_fb_photo', true); ?>">
+                            <img src="<?php echo get_post_meta($post->ID, 'ev_gallery_image_'.$gallery_image, true); ?>" width="180" height="119" />
+                        </a>
+                    </li>
+                    
+                    <?php
+                            endif;
+                        $gallery_image++;    
+                        endwhile;
+                    ?>
+                    
 				</ul>
-                 *
-                 */?>
+                
+                <?php endif; ?>
+
 			</div>
 		</div><!-- end event-toronto -->
         
