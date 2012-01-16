@@ -39,15 +39,20 @@ $check_list = new WP_Query(array(
         <div id="timeline">
 			<h4 class="timeline-title">Timeline</h4>
             
+            <?php
+                $count=0;
+                $parent_class = array( 'step-conception', 'step-groundwork', 'step-prehack', 'step-hack', 'step-posthack' );
+            ?>
+            
+            
             <?php if($check_list->have_posts()) : while($check_list->have_posts()) : $check_list->the_post(); ?>
-
-			<div class="parent">
+			<div class="parent <?php echo isset($parent_class[$count]) ? $parent_class[$count] : null; ?>">
 				<h5 class="parent-title"><?php the_title(); ?></h5>
                 
                 <?php the_content(); ?>
 						
 			</div><!-- end .parent -->
-            
+            <?php $count++; ?>
             <?php endwhile; endif; ?>
 			
 		</div><!-- end #timeline -->
