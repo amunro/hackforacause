@@ -28,8 +28,18 @@
   <!-- CSS -->
   <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/boilerplate.css" />
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  <?php if (isset($_POST['signed_request'])) : ?>
+  
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>fb-style.css" />
+  
+  <?php else: ?>
+  
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+  
+  <?php endif; ?>
+  
 	<!-- For iPhone 4 with high-resolution Retina display: -->
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/apple-touch-icon-114.png">
 	<!-- For first-generation iPad: -->
@@ -69,6 +79,7 @@
 </script>
 
 <body <?php body_class(); ?>>
+
 <div id="container">
     <div id="cintainer-inner">
         <div id="header">
