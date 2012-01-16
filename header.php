@@ -26,6 +26,7 @@
   <title><?php bloginfo('name'); ?> | <?php bloginfo('description');?></title>
 
   <!-- CSS -->
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/boilerplate.css" />
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>

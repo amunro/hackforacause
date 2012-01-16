@@ -59,7 +59,7 @@ while($events->have_posts()) {
 				<li class="app-image">
 					<?php the_post_thumbnail(array(280, 250)); ?>
 				</li>
-				<li class="app-name"><?php the_title(); ?></li>
+				<li class="app-name"><a href="<?php the_permalink(); ?>" title="Link to <?php the_title(); ?>"><?php the_title(); ?></a></li>
 				<li class="app-description">
 					<div class="app-description-container">
 						<?php the_content(); ?>
@@ -69,7 +69,7 @@ while($events->have_posts()) {
 				<?php if ('' !== get_post_meta($post->ID, 'product_fb_like', true)) : ?>
 				
 				<li class="app-link">
-					<iframe src="//<?php echo preg_replace('/http:\/\/www.facebook.com/', 'www.facebook.com', get_post_meta($post->ID, 'product_fb_like', true)); ?>" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowtransparency="true"></iframe>
+					<div class="fb-like" data-layout="button_count" data-href="<?= the_permalink($post->ID) ?>" data-send="false" data-width="450" data-show-faces="true"></div>
 				</li>
 				
 				<?php endif; ?>
